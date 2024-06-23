@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  py-kms:
+    build:
+      context: ./py-kms
+      dockerfile: ./docker/docker-py3-kms/Dockerfile
+    ports:
+      - 1688:1688
+    container_name: py-kms
+    restart: unless-stopped
